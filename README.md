@@ -1,8 +1,8 @@
 # Introduction PHP et MySql
 
-# Description du guide
+## Description du guide
 
-Ce guide ce veut d'être un aide-mémoire pour les opérations de bases en PHP ainsi que les notions Sql.
+Ce guide ce veut d'être un aide-mémoire pour les opérations de bases en PHP ainsi que certaines notions Sql.
 
 ## PHP
 
