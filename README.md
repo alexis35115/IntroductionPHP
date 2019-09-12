@@ -8,11 +8,11 @@ Ce guide ce veut d'être un aide-mémoire pour les opérations de bases en PHP a
 
 ### Description
 
-PHP: Hypertext Preprocessor, plus connu sous son sigle PHP (sigle auto-référentiel), est un langage de programmation libre6, principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP5, mais pouvant également fonctionner comme n'importe quel langage interprété de façon locale. PHP est un langage impératif orienté objet.
+PHP: Hypertext Preprocessor, plus connu sous son sigle PHP (sigle auto-référentiel), est un langage de programmation libre6, principalement utilisé pour produire des pages Web dynamiques via un serveur HTTP, mais pouvant également fonctionner comme n'importe quel langage interprété de façon locale. PHP est un langage impératif orienté objet.
 
 ### Utilisation
 
-PHP a permis de créer un grand nombre de sites web célèbres, comme Facebook, Wikipédia, etc.7 Il est considéré comme une des bases de la création de sites web dits dynamiques mais également des applications web.
+PHP a permis de créer un grand nombre de sites web célèbres, comme Facebook, Wikipédia et etc. Il est considéré comme une des bases de la création de sites web dits dynamiques mais également des applications web.
 
 ### Configuration de l'environnement de travail
 
