@@ -42,11 +42,11 @@ Voici un [guide](https://github.com/jupeter/clean-code-php) à lire sur les bonn
 ?>
 ```
 
-Voir le fichier "src\exemples\ecrireCommentaires.php".
+Voir le [fichier](https://github.com/alexis35115/IntroductionPHP/blob/master/src/exemples/ecrireCommentaires.php).
 
 #### Création d'une variable
 
-Voir le fichier "src\exemples\creationVariables.php" et pour connaître les types possibles voici une [référence](https://www.php.net/manual/fr/function.gettype.php#refsect1-function.gettype-returnvalues).
+Voir le [fichier](https://github.com/alexis35115/IntroductionPHP/blob/master/src/exemples/creationVariables.php) et pour connaître les types possibles voici une [référence](https://www.php.net/manual/fr/function.gettype.php#refsect1-function.gettype-returnvalues).
 
 #### echo
 
@@ -78,15 +78,15 @@ Voir le fichier "src\exemples\creationVariables.php" et pour connaître les type
 
 #### Opérateur (if, while, for, foeach, égalité)
 
-Voir le [fichier]("../src/exemples/exempleOperateurs.php").
+Voir le [fichier](https://github.com/alexis35115/IntroductionPHP/blob/master/src/exemples/exempleOperateurs.php).
 
 #### Utilisation de la "->"
 
-Voir le [fichier]("../src/exemples/flecheSyntaxe.php").
+Voir le [fichier](https://github.com/alexis35115/IntroductionPHP/blob/master/src/exemples/flecheSyntaxe.php).
 
 #### Concaténation
 
-Voir le [fichier](../src/exemples/concatenation.php).
+Voir le [fichier](https://github.com/alexis35115/IntroductionPHP/blob/master/src/exemples/concatenation.php).
 
 #### Utilisation du HTML et php
 
