@@ -117,12 +117,13 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voir la [documenta
 
     include "database.php"; // Correspond au code de la section précédente
 
+    // Définir la requête
     $requeteAExecuter = "SELECT colone1 FROM nomTable";
     // Préparer la commande à exécuter
     $objetQuiContientLaRequeteAExecuter = $basededonnees->prepare($requeteAExecuter);
     // Exécute la requête
     $objetQuiContientLaRequeteAExecuter->execute();
-    // Récupérer les données de la requêtes préalablement exécutée
+    // Récupérer les données de la requête préalablement exécutée
     $elementsRecuperes = $objetQuiContientLaRequeteAExecuter->fetchAll();
 
     print_r($elementsRecuperes);
