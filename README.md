@@ -99,13 +99,13 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voir la [documenta
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    $login = 'root'; // nom de l'identifant
-    $password = 'admin123'; // mot de passe
-    $host = 'localhost'; // nom du serveur
-    $dbName = 'demowow'; // nom de la base de données
+    $identifiant = 'root';
+    $motDePasse = 'admin123';
+    $nomServeur = 'localhost';
+    $nomBaseDeDonnees = 'demowow';
 
-    $dsn = 'mysql:dbname='.$dbName.';host=' . $host;
-    $basededonnees = new PDO($dsn, $login, $password);
+    $chaineConnection = 'mysql:dbname='.$nomBaseDeDonnees.';host=' . $nomServeur;
+    $basededonnees = new PDO($chaineConnection, $identifiant, $motDePasse);
 
     // l'objet $basededonnees sera avec lequel que nous allons pouvoir travailler avec la base de données
 ?>
