@@ -178,4 +178,4 @@ phpMyAdmin n'offre pas l'option de supprimer une table via son interface, il fau
 
 TODO : Comment exporter une base de données en un fichier sql.
 
-TODO :comment exporter les données d'une table en plusieurs format.
+TODO : Comment exporter les données d'une table en plusieurs format.
