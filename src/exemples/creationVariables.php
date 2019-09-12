@@ -48,26 +48,26 @@
         // Description : Une chaîne de caractères est une série de caractères, où un caractère est la même chose qu'un octet. De ce fait, PHP ne supporte que les jeux de caractères comportant 256 caractères différents, et, donc, n'a pas de support natif pour l'Unicode. Reportez-vous aux détails sur le type chaîne de caractères pour plus d'informations.
 
         // Exemples : 
-        echo 'ceci est une chaîne simple';
+        echo('ceci est une chaîne simple');
 
-        echo 'Vous pouvez également ajouter des nouvelles lignes
+        echo('Vous pouvez également ajouter des nouvelles lignes
         dans vos chaînes
-        de cette façon';
+        de cette façon');
         
         // Affiche : Arnold a dit : "I'll be back"
-        echo 'Arnold a dit : "I\'ll be back"';
+        echo('Arnold a dit : "I\'ll be back"');
         
         // Affiche : Voulez-vous supprimer C:\*.*?
-        echo 'Voulez-vous supprimer C:\\*.*?';
+        echo('Voulez-vous supprimer C:\\*.*?');
         
         // Affiche : Voulez-vous supprimer C:\*.*?
-        echo 'Voulez-vous supprimer C:\*.*?';
+        echo('Voulez-vous supprimer C:\*.*?');
         
         // Affiche : Ceci n'affichera pas \n de nouvelle ligne
-        echo 'Ceci n\'affichera pas \n de nouvelle ligne';
+        echo('Ceci n\'affichera pas \n de nouvelle ligne');
         
         // Affiche : Les variables ne seront pas $traitees $ici
-        echo 'Les variables ne seront pas $traitees $ici';
+        echo('Les variables ne seront pas $traitees $ici');
 
 
     // Les tableaux
