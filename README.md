@@ -12,7 +12,7 @@ PHP: Hypertext Preprocessor, plus connu sous son sigle PHP (sigle auto-référen
 
 ### Utilisation
 
-PHP a permis de créer un grand nombre de sites web célèbres, comme Facebook, Wikipédia et etc. Il est considéré comme une des bases de la création de sites web dits dynamiques mais également des applications web.
+PHP a permis de créer un grand nombre de sites web célèbres, comme Facebook, Wikipédia et etc. Il est considéré comme une des bases de la création de sites web dits dynamiques, mais également des applications web.
 
 ### Configuration de l'environnement de travail
 
