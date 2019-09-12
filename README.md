@@ -128,11 +128,9 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voici la [document
 
 ## MySql
 
-### Description
+### Qu'est-ce que phpMyAdmin
 
-### Qu'est-ce que PhpMyAdmin
-
-### Comment utiliser Azure Data Studio ou Visual Studio Code
+phpMyAdmin est un logiciel gratuit écrit en PHP, destiné à gérer l'administration de MySQL sur le Web. phpMyAdmin prend en charge un large éventail d'opérations sur MySQL et MariaDB. Les opérations fréquemment utilisées (gestion des bases de données, des tables, des colonnes, des relations, des index, des utilisateurs, des autorisations, etc.) peuvent être effectuées via l'interface utilisateur, tout en vous permettant d'exécuter directement toute instruction SQL.
 
 ### Configurations de bases de PhpMyAdmin
 
