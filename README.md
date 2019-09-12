@@ -132,11 +132,11 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voici la [document
 
 phpMyAdmin est un logiciel gratuit écrit en PHP, destiné à gérer l'administration de MySQL sur le Web. phpMyAdmin prend en charge un large éventail d'opérations sur MySQL et MariaDB. Les opérations fréquemment utilisées (gestion des bases de données, des tables, des colonnes, des relations, des index, des utilisateurs, des autorisations, etc.) peuvent être effectuées via l'interface utilisateur, tout en vous permettant d'exécuter directement toute instruction SQL.
 
-### Configurations de bases de PhpMyAdmin
+### Configurations de bases de phpMyAdmin
 
 ### Création d'une base de données
 
-#### Via PhpMyAdmin
+#### Via phpMyAdmin
 
 #### Via Sql
 
@@ -144,13 +144,13 @@ phpMyAdmin est un logiciel gratuit écrit en PHP, destiné à gérer l'administr
 
 #### À quoi une table dans une base de données
 
-#### Via Sql
+#### Via phpMyAdmin
 
-### Création d'une table
+#### Via Sql
 
 ### Comment procéder à la suppression d'une table
 
- par ligne de commande only
+phpMyAdmin n'offre pas l'option de supprimer une table via son interface, il faut donc procéder à la suppression via une commande SQL.
 
 ### Cas d'utilisations
 
