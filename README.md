@@ -48,7 +48,7 @@ Voir le [fichier](https://github.com/alexis35115/IntroductionPHP/blob/master/src
 
 Voir le [fichier](https://github.com/alexis35115/IntroductionPHP/blob/master/src/exemples/creationVariables.php) et pour connaître les types possibles voici une [référence](https://www.php.net/manual/fr/function.gettype.php#refsect1-function.gettype-returnvalues).
 
-#### echo
+#### Intruction echo
 
 ```php
 <?php
