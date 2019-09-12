@@ -90,7 +90,7 @@ Voir le [fichier](https://github.com/alexis35115/IntroductionPHP/blob/master/src
 
 #### Utilisation du HTML et php
 
-Pour inclure du HTML dans un fichier avec l'extension ".php", voici la [documentation](https://www.php.net/manual/fr/faq.html.php).
+Pour inclure du HTML dans un fichier avec l'extension ".php", voir la [documentation](https://www.php.net/manual/fr/faq.html.php).
 
 #### Connexion avec une base de données MySql
 
