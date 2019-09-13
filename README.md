@@ -164,7 +164,7 @@ CREATE TABLE `nomTable` (
   `cleUnique` int(11) NOT NULL,
   `champ1` varchar(20) NOT NULL,
   `champ2` text NOT NULL,
-  `champ13` varchar(50) DEFAULT NULL
+  `champ3` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- int        : est un type pour les numérosALTER
