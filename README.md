@@ -209,3 +209,5 @@ TODO : Comment exporter les données d'une table en plusieurs format.
 préciser comment savoir quand quel contexte que nous sommes avec phpMyAdmin
 
 mettre du commentaire dans du sql
+
+couvrir les auto-incréments et création d'index
