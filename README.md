@@ -146,6 +146,10 @@ Se référer au [guide](https://www.dropbox.com/sh/ng3cfib6mkz5vb7/AAAfjjyGkXm6k
 
 #### Via Sql
 
+```sql
+CREATE DATABASE nomDeLaBaseDeDonnees;
+```
+
 ### Création d'une table
 
 #### À quoi une table dans une base de données
@@ -154,9 +158,28 @@ Se référer au [guide](https://www.dropbox.com/sh/ng3cfib6mkz5vb7/AAAfjjyGkXm6k
 
 #### Via Sql
 
+```sql
+-- Exemple :
+CREATE TABLE `nomTable` (
+  `cleUnique` int(11) NOT NULL,
+  `champ1` varchar(20) NOT NULL,
+  `champ2` text NOT NULL,
+  `champ13` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- int        : est un type pour les numérosALTER
+-- varchar(X) : est pour une chaîne de caractères avec une longueur définieALTER
+-- texte      : est pour les champs textes "long"
+-- Voir la documentation complète https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+```
+
 ### Comment procéder à la suppression d'une table
 
 phpMyAdmin n'offre pas l'option de supprimer une table via son interface, il faut donc procéder à la suppression via une commande SQL.
+
+```sql
+DROP TABLE nomtable;
+```
 
 ### Cas d'utilisations
 
@@ -179,3 +202,7 @@ phpMyAdmin n'offre pas l'option de supprimer une table via son interface, il fau
 TODO : Comment exporter une base de données en un fichier sql.
 
 TODO : Comment exporter les données d'une table en plusieurs format.
+
+préciser comment savoir quand quel contexte que nous sommes avec phpMyAdmin
+
+mettre du commentaire dans du sql
