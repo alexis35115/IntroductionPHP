@@ -175,7 +175,7 @@ CREATE TABLE `nomTable` (
 
 ### Comment procéder à la suppression d'une table
 
-phpMyAdmin n'offre pas l'option de supprimer une table via son interface, il faut donc procéder à la suppression via une commande SQL.
+
 
 ```sql
 DROP TABLE nomtable;
