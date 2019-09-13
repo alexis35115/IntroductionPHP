@@ -186,7 +186,9 @@ DROP TABLE nomtable;
 
 #### Manipulations des données dans une table
 
-##### Importance d'avoir une clé unique
+##### Importance d'avoir une clé primaire
+
+Le choix d'une clé primaire est l'une des étapes les plus importantes d'une bonne conception de base de données. Une clé primaire est une colonne de table ayant un objectif particulier. Chaque table de base de données nécessite une clé primaire, car elle garantit une accessibilité au niveau de la ligne! Les valeurs qui composent une colonne de clé primaire sont uniques et il n'y a pas deux valeurs identiques.
 
 ##### Effectuer une recherche
 
