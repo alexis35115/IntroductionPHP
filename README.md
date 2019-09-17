@@ -211,3 +211,5 @@ préciser comment savoir quand quel contexte que nous sommes avec phpMyAdmin
 mettre du commentaire dans du sql
 
 couvrir les auto-incréments et création d'index
+
+parler du post et du get
