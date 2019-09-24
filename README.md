@@ -148,7 +148,11 @@ Se référer au [guide](https://www.dropbox.com/sh/ng3cfib6mkz5vb7/AAAfjjyGkXm6k
 
 #### Via phpMyAdmin
 
+Une fois phpMyAdmin d'ouvert, il suffit de cliquer sur le bouton "Nouvelle base de données" dans le menu de gauche.
+
 #### Via Sql
+
+Voici la commande SQL à exécuter :
 
 ```sql
 CREATE DATABASE nomDeLaBaseDeDonnees;
@@ -156,14 +160,14 @@ CREATE DATABASE nomDeLaBaseDeDonnees;
 
 ### Création d'une table
 
-#### À quoi une table dans une base de données
+#### À quoi sert une table dans une base de données
 
-#### Via phpMyAdmin
+Une table est un ensemble de données organisées sous forme d'un tableau où les colonnes correspondent à des catégories d'information (une colonne peut stocker des numéros de téléphone, une autre des noms...) et les lignes à des enregistrements, également appelés entrées.
 
-#### Via Sql
+Pour créer une table via phpMyAdmin, il suffit dans le menu d'étendre la base de données dans laquelle on veut ajouter une table et cliquer sur "Nouvelle table".
 
 ```sql
--- Exemple :
+-- Création via sql :
 CREATE TABLE `nomTable` (
   `cleUnique` int(11) NOT NULL,
   `champ1` varchar(20) NOT NULL,
