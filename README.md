@@ -194,17 +194,57 @@ DROP TABLE nomtable;
 
 #### Manipulations des données dans une table
 
+Dans la section suivantes, inscrire des exemples simples comme démonstration.
+
 ##### Clé primaire
 
 Le choix d'une clé primaire est l'une des étapes les plus importantes d'une bonne conception de base de données. Une clé primaire est une colonne de table ayant un objectif particulier. Chaque table de base de données nécessite une clé primaire, car elle garantit une accessibilité au niveau de la ligne! Les valeurs qui composent une colonne de clé primaire sont uniques et il n'y a pas deux valeurs identiques.
 
 ##### Effectuer une recherche
 
+```sql
+-- Récupérer tous les enregistrements d'une table
+SELECT * FROM nomTable;
+```
+
+```sql
+-- Récupérer tous les enregistrements d'une table ou l'[id] est égale à 1
+SELECT * FROM nomTable WHERE id = 1;
+```
+
+```sql
+-- Récupérer seulement une colonne dans une recherche
+SELECT nomColonne FROM nomTable;
+```
+
 ##### Effectuer une mise à jour
+
+```sql
+-- Modifier la valeur d'une colonne dans la table
+-- UPDATE nomTable SET nomColonne=[value];
+
+UPDATE nomTable SET nomColonne="pewpew";
+```
+
+```sql
+-- Modifier la valeur d'une colonne d'un enregistrement précis
+UPDATE nomTable SET nomColonne="pewpew" WHERE id = 1;
+```
 
 ##### Effectuer une suppression
 
-##### Faire une mise à jour
+```sql
+-- Supprimer un enregistrement précis dans une table
+DELETE FROM nomTable WHERE id = 1;
+```
+
+##### Effectuer une insertion
+
+```sql
+-- Insérer des valeurs dans une table
+INSERT INTO nomTable(colonne1, colonne2) VALUES ("valeur1", 1);
+-- Dans l'exemple la première colonne est du texte et la seconde un nombre
+```
 
 #### Caractères d'échapement
 
