@@ -132,9 +132,11 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voir la [documenta
 
 #### Instruction GET
 
-À documenter
+À documenter.
 
 #### Instruction POST
+
+À documenter.
 
 ## MySql
 
@@ -242,7 +244,7 @@ DELETE FROM nomTable WHERE id = 1;
 ##### Effectuer une insertion
 
 ```sql
--- Insérer des valeurs dans une table
+-- Insérer un enregistrement dans la table
 INSERT INTO nomTable(colonne1, colonne2) VALUES ("valeur1", 1);
 -- Dans l'exemple la première colonne est du texte et la seconde un nombre
 ```
