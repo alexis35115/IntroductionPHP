@@ -269,5 +269,3 @@ Suivre la procédure "Exporter une base de données en un fichier sql" sauf qu'i
 
 #### À FINIR :
 préciser comment savoir quand quel contexte que nous sommes avec phpMyAdmin
-
-couvrir les auto-incréments et création d'index
