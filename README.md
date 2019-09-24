@@ -132,6 +132,8 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voir la [documenta
 
 #### Instruction GET
 
+À documenter
+
 #### Instruction POST
 
 ## MySql
