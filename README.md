@@ -248,6 +248,8 @@ INSERT INTO nomTable(colonne1, colonne2) VALUES ("valeur1", 1);
 
 #### Caractères d'échapement
 
+Si vous avez à travailler avec des données en format texte, il est plus simple de mettre " au lieu de '. Le guillement simple peut causer des problèmes. Si vous devez absolumenet utiliser le guillement simple il suffit de mettre un \ devant le guillemet simple.
+
 ### Astuces
 
 TODO : Comment exporter une base de données en un fichier sql.
