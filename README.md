@@ -267,8 +267,7 @@ Le fichier produit sera une requête sql qui sera exécutable pour créer une ba
 
 Suivre la procédure "Exporter une base de données en un fichier sql" sauf qu'il faut sélectionner la table cible au lieu de la base de données.
 
-
-
+#### À FINIR :
 préciser comment savoir quand quel contexte que nous sommes avec phpMyAdmin
 
 couvrir les auto-incréments et création d'index
