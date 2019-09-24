@@ -132,7 +132,23 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voir la [documenta
 
 #### Instruction GET
 
-À documenter.
+Un tableau associatif des valeurs passées au script courant via les paramètres d'URL (aussi connue sous le nom de "query string"). Notez que ce tableau n'est pas seulement rempli pour les requêtes GET, mais plutôt pour toutes les requêtes avec un query string.
+
+$HTTP_GET_VARS contient les mêmes informations, mais n'est pas superglobale. (Notez que $HTTP_GET_VARS et $_GET sont des variables différentes et que PHP les traite comme telles.)
+
+Exemple avec $_GET
+
+```php
+<?php
+echo 'Bonjour ' . htmlspecialchars($_GET["name"]) . '!';
+?>
+```
+
+En assumant que l'utilisateur a entré <http://example.com/?name=Yannick>
+
+L'exemple ci-dessus va afficher quelque chose de similaire à :
+
+Bonjour Yannick!
 
 #### Instruction POST
 
