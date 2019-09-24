@@ -144,17 +144,16 @@ phpMyAdmin est un logiciel gratuit écrit en PHP, destiné à gérer l'administr
 
 Se référer au [guide](https://www.dropbox.com/sh/ng3cfib6mkz5vb7/AAAfjjyGkXm6k5YicMksqEOSa?dl=0&preview=Configuration+PHP+et+MySQL.pdf).
 
-### Création d'une base de données
+### Comment inscrire un commentaire en sql
 
-#### Via phpMyAdmin
+Pour écrire une ligne de commentaire dans un fichier sql, il suffit de commencer la ligne par "--".
+
+### Création d'une base de données
 
 Une fois phpMyAdmin d'ouvert, il suffit de cliquer sur le bouton "Nouvelle base de données" dans le menu de gauche.
 
-#### Via Sql
-
-Voici la commande SQL à exécuter :
-
 ```sql
+-- Instruction pour exécution en sql
 CREATE DATABASE nomDeLaBaseDeDonnees;
 ```
 
@@ -252,12 +251,24 @@ Si vous avez à travailler avec des données en format texte, il est plus simple
 
 ### Astuces
 
-TODO : Comment exporter une base de données en un fichier sql.
+#### Exporter une base de données en un fichier sql
 
-TODO : Comment exporter les données d'une table en plusieurs format.
+- Ouvrez phpMyAdmin.
+- À partir de la liste de gauche, cliquez sur le nom de la base de données à exporter. La page se rafraîchira pour afficher les informations relatives à la base de données sélectionnée.
+- Cliquez sur l’onglet « Exporter ». La page se rafraîchira pour afficher les options d’exportation.
+- À partir du groupe « Exporter », sélectionnez l’option « MySQL » si ce n’est déjà fait.
+- Dans la section « Options SQL » (SQL Options), cochez les cases jouxtant les options « Structure » et « Données ».
+- Cochez la case « Transmettre » située au bas des options.
+- Cliquez sur le bouton « Exécuter ».
+
+Le fichier produit sera une requête sql qui sera exécutable pour créer une base de données identique à celle exportée.
+
+#### Exporter les données d'une table
+
+Suivre la procédure "Exporter une base de données en un fichier sql" sauf qu'il faut sélectionner la table cible au lieu de la base de données.
+
+
 
 préciser comment savoir quand quel contexte que nous sommes avec phpMyAdmin
-
-mettre du commentaire dans du sql
 
 couvrir les auto-incréments et création d'index
