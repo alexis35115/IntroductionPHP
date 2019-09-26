@@ -139,6 +139,8 @@ $HTTP_GET_VARS contient les mêmes informations, mais n'est pas superglobale. (N
 
 Exemple avec $_GET
 
+TODO : Exemple à venir
+
 ```php
 <?php
 echo 'Bonjour ' . htmlspecialchars($_GET["name"]) . '!';
