@@ -106,7 +106,8 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voir la [documenta
 
     $chaineConnection = 'mysql:dbname='.$nomBaseDeDonnees.';host=' . $nomServeur;
     $basededonnees = new PDO($chaineConnection, $identifiant, $motDePasse);
-
+    // La ligne suivante est importante pour empêcher les problèmes d'affichages
+    $basededonnees->exec( 'SET CHARACTER SET UTF8' );
     // l'objet $basededonnees sera avec lequel que nous allons pouvoir travailler avec la base de données
 ?>
 ```
