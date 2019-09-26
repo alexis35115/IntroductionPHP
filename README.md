@@ -289,3 +289,5 @@ Le fichier produit sera une requête sql qui sera exécutable pour créer une ba
 #### Exporter les données d'une table
 
 Suivre la procédure "Exporter une base de données en un fichier sql" sauf qu'il faut sélectionner la table cible au lieu de la base de données.
+
+Parler comment inclure une image dynamiquement <https://gist.github.com/alexis35115/bcaa6750fe73397b9437d292d262ba1b>
