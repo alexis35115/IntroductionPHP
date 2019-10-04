@@ -18,6 +18,8 @@ PHP a permis de créer un grand nombre de sites web célèbres, comme Facebook, 
 
 Se référer au [guide](https://www.dropbox.com/sh/ng3cfib6mkz5vb7/AAAfjjyGkXm6k5YicMksqEOSa?dl=0&preview=Configuration+PHP+et+MySQL.pdf).
 
+De plus, voir le [fichier powershell](https://github.com/alexis35115/InitialSetupVisualStudioCode/blob/master/InitialSetupVisualStudioCode.ps1) pour effectuer une configuration initiale de Visal Studio Code.
+
 ### Bonnes pratiques php
 
 Voici un [guide](https://github.com/jupeter/clean-code-php) à lire sur les bonnes pratiques en php.
