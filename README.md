@@ -313,3 +313,5 @@ ALTER TABLE `nomTable` ADD INDEX(`id`);
 -- Ajouter l'auto-incrément sur le champ `id`
 ALTER TABLE `nomTable` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
 ```
+
+voir la référence : <https://stackoverflow.com/questions/8114535/mysql-1075-incorrect-table-definition-autoincrement-vs-another-key>
