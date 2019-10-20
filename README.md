@@ -293,3 +293,23 @@ Le fichier produit sera une requête sql qui sera exécutable pour créer une ba
 Suivre la procédure "Exporter une base de données en un fichier sql" sauf qu'il faut sélectionner la table cible au lieu de la base de données.
 
 Parler comment inclure une image dynamiquement <https://gist.github.com/alexis35115/bcaa6750fe73397b9437d292d262ba1b>
+
+### Problèmes
+
+#### Impossible de mettre une colonne auto-incrément suite à sa création
+
+Si vous avez une table déjà existante et que vous voulez mettre le champ "id" auto-incrément sans l'avoir fait lors de sa création initiale, il faut procéder par ligne de commandes et non pas l'interface de phpMyAdmin.
+
+Voici le message d'erreur : 
+
+image ici
+
+Voici comment faire :
+
+```sql
+-- Commencer par ajouter l'index sur le champ `id`
+ALTER TABLE `nomTable` ADD INDEX(`id`);
+
+-- Ajouter l'auto-incrément sur le champ `id`
+ALTER TABLE `nomTable` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+```
