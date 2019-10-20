@@ -300,9 +300,9 @@ Parler comment inclure une image dynamiquement <https://gist.github.com/alexis35
 
 Si vous avez une table déjà existante et que vous voulez mettre le champ "id" auto-incrément sans l'avoir fait lors de sa création initiale, il faut procéder par ligne de commandes et non pas l'interface de phpMyAdmin.
 
-Voici le message d'erreur : 
+Voici le message d'erreur :
 
-image ici
+![Image du problème](https://raw.githubusercontent.com/alexis35115/IntroductionPHP/master/src/img/impossibleAI.PNG "Image du problème")
 
 Voici comment faire :
 
