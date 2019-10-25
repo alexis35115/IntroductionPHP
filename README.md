@@ -315,3 +315,64 @@ ALTER TABLE `nomTable` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
 ```
 
 voir la référence : <https://stackoverflow.com/questions/8114535/mysql-1075-incorrect-table-definition-autoincrement-vs-another-key>
+
+## Problème pour la mise à jour d'une date vers MySQL
+
+Voici un exemple de comment gérer la mise à jour ou l'insertion d'une date avec PHP.
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Demo du problème avec les dates</h1>
+<?php 
+    // S'assurer que le champ date dans la base de données soit de type "Date" et
+    // que la valeur par défaut soit "NULL".
+
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
+    // La variable $dateContenueDansPost représente la valeur contenu dans le $_POST
+    // Pour essayer, prendre les valeurs : NULL or "2019-01-01"
+    $dateContenueDansPost = "2019-01-01";
+
+    $requete = "UPDATE utilisateur SET dateInscription=".obtenirDateDansPost($dateContenueDansPost)." WHERE id=1";
+
+    try {
+        echo($requete);
+        $succes = obtenirConnexionBd()->prepare($requete)->execute();
+    } catch (Exception $e) {
+        echo($e);
+    }
+
+    echo($succes ? "Tout fonctionne!" : "Oups, encore en erreur!");
+
+    function obtenirDateDansPost($date) {
+        return empty($date) ? 'NULL' : "'".date("Y-m-d", strtotime($date))."'";
+    }
+
+    function obtenirConnexionBd() {
+        $identifiant = 'root';
+        $motPasse = 'admin123';
+        $host = 'localhost';
+        $nomBd = 'demoProblemes';
+
+        $dsn = 'mysql:dbname='.$nomBd.';host=' . $host;
+        $bd = new PDO($dsn, $identifiant, $motPasse);
+        // Configurer la gestion d'erreurs
+        $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $bd;
+    }
+?>
+</body>
+</html>
+```
+
+Références : <https://stackoverflow.com/questions/38350233/cant-update-date-field-in-mysql-using-php/38350266>
