@@ -331,7 +331,7 @@ Voici un exemple de comment gérer la mise à jour ou l'insertion d'une date ave
 </head>
 <body>
 <h1>Demo du problème avec les dates</h1>
-<?php 
+<?php
     // S'assurer que le champ date dans la base de données soit de type "Date" et
     // que la valeur par défaut soit "NULL".
 
