@@ -320,7 +320,7 @@ voir la référence : <https://stackoverflow.com/questions/8114535/mysql-1075-in
 
 Voici un exemple de comment gérer la mise à jour ou l'insertion d'une date avec PHP.
 
-Voici le script de la base de données pour essayer :
+Voici le script de la base de données :
 
 ```sql
 -- phpMyAdmin SQL Dump
@@ -396,7 +396,7 @@ COMMIT;
 
 ```
 
-Voici le fichier php pour tester le tout:
+Voici le fichier php :
 
 ```php
 <!DOCTYPE html>
