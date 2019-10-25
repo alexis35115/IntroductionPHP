@@ -316,7 +316,7 @@ ALTER TABLE `nomTable` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
 
 voir la référence : <https://stackoverflow.com/questions/8114535/mysql-1075-incorrect-table-definition-autoincrement-vs-another-key>
 
-## Problème pour la mise à jour d'une date vers MySQL
+#### Problème pour la mise à jour d'une date vers MySQL
 
 Voici un exemple de comment gérer la mise à jour ou l'insertion d'une date avec PHP.
 
