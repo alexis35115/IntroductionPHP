@@ -106,28 +106,29 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voir la [documenta
     $estSurServeurTim = strpos($adresseCourante, 'tim.cgmatane.qc.ca') !==false ? true : false;
 
     if ($estSurServeurTim) {
-        $identifiant = 'tim_garonmichaud';
-        $motPasse = 'PewPew$!&10';
-        $host = 'localhost';
-        $nomBd = 'tim_garonmichaud';
+        $usager = 'tim_pewpew';
+        $motdepasse = 'aEC%rpewpewXD';
+        $hote = 'localhost';
+        $base = 'tim_pewpew';
     }
     else {
-        $identifiant = 'root';
-        $motPasse = 'admin123';
-        $host = 'localhost';
-        $nomBd = 'demoProblemes';
+        $usager = 'root';
+        $motdepasse = 'admin123';
+        $hote = 'localhost';
+        $base = 'liste_musique';
     }
 
-    $dsn = 'mysql:dbname='.$nomBd.';host=' . $host;
-    $bd = new PDO($dsn, $identifiant, $motPasse);
+    $dsn = 'mysql:dbname='.$base.';host=' . $hote;
+    $basededonnees = new PDO($dsn, $usager, $motdepasse);
     // Configurer la gestion d'erreurs
-    $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // La ligne suivante est importante pour empêcher les problèmesd'affichages
-    $bd->exec( 'SET CHARACTER SET UTF8' );
+    $basededonnees->exec( 'SET CHARACTER SET UTF8' );
 
-    return $bd;
+    return $basededonnees;
     // l'objet $basededonnees sera avec lequel que nous allons pouvoir travailler avec la base de données
 ?>
+
 ```
 
 ##### Obtenir des données à partir de la base de données
@@ -458,11 +459,11 @@ Voici le fichier php :
         $nomBd = 'demoProblemes';
 
         $dsn = 'mysql:dbname='.$nomBd.';host=' . $host;
-        $bd = new PDO($dsn, $identifiant, $motPasse);
+        $basededonnees = new PDO($dsn, $identifiant, $motPasse);
         // Configurer la gestion d'erreurs
-        $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $basededonnees->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        return $bd;
+        return $basededonnees;
     }
 ?>
 </body>
