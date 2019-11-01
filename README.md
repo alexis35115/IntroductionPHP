@@ -101,15 +101,31 @@ Pour inclure du HTML dans un fichier avec l'extension ".php", voir la [documenta
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
-    $identifiant = 'root';
-    $motDePasse = 'admin123';
-    $nomServeur = 'localhost';
-    $nomBaseDeDonnees = 'demowow';
+    $adresseCourante = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-    $chaineConnection = 'mysql:dbname='.$nomBaseDeDonnees.';host=' . $nomServeur;
-    $basededonnees = new PDO($chaineConnection, $identifiant, $motDePasse);
-    // La ligne suivante est importante pour empêcher les problèmes d'affichages
-    $basededonnees->exec( 'SET CHARACTER SET UTF8' );
+    $estSurServeurTim = strpos($adresseCourante, 'tim.cgmatane.qc.ca') !==false ? true : false;
+
+    if ($estSurServeurTim) {
+        $identifiant = 'tim_garonmichaud';
+        $motPasse = 'PewPew$!&10';
+        $host = 'localhost';
+        $nomBd = 'tim_garonmichaud';
+    }
+    else {
+        $identifiant = 'root';
+        $motPasse = 'admin123';
+        $host = 'localhost';
+        $nomBd = 'demoProblemes';
+    }
+
+    $dsn = 'mysql:dbname='.$nomBd.';host=' . $host;
+    $bd = new PDO($dsn, $identifiant, $motPasse);
+    // Configurer la gestion d'erreurs
+    $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // La ligne suivante est importante pour empêcher les problèmesd'affichages
+    $bd->exec( 'SET CHARACTER SET UTF8' );
+
+    return $bd;
     // l'objet $basededonnees sera avec lequel que nous allons pouvoir travailler avec la base de données
 ?>
 ```
