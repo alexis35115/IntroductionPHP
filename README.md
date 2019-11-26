@@ -311,6 +311,35 @@ Suivre la procédure "Exporter une base de données en un fichier sql" sauf qu'i
 
 Parler comment inclure une image dynamiquement <https://gist.github.com/alexis35115/bcaa6750fe73397b9437d292d262ba1b>
 
+### Astuces
+
+#### Déterminer le type d'une variable lors de l'exécution
+
+Parfois, il est nécessaire de déterminer le type d'une variable pour ensuite exécuter un traitement spécifique, mais également pour déboguer. Pour se faire, il existe la commande "[getype](https://www.php.net/manual/fr/function.gettype.php)".
+
+La commande gettype retourne sous format texte le type de la variable passée en paramètre.
+
+Voici quelques exemples :
+
+```php
+<?php
+
+    $data = array(1, 1., NULL, new  stdClass, 'foo');
+
+    foreach ($data as $value) {
+        echo gettype($value), "\n";
+    }
+?>
+```
+
+L'exemple ci-dessus va afficher quelque chose de similaire à :
+
+- integer
+- double
+- NULL
+- object
+- string
+
 ### Problèmes
 
 #### Impossible de mettre une colonne auto-incrément suite à sa création
