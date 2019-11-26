@@ -311,8 +311,6 @@ Suivre la procédure "Exporter une base de données en un fichier sql" sauf qu'i
 
 Parler comment inclure une image dynamiquement <https://gist.github.com/alexis35115/bcaa6750fe73397b9437d292d262ba1b>
 
-### Astuces
-
 #### Déterminer le type d'une variable lors de l'exécution
 
 Parfois, il est nécessaire de déterminer le type d'une variable pour ensuite exécuter un traitement spécifique, mais également pour déboguer. Pour se faire, il existe la commande "[getype](https://www.php.net/manual/fr/function.gettype.php)".
