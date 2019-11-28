@@ -498,3 +498,7 @@ Voici le fichier php :
 ```
 
 Références : <https://stackoverflow.com/questions/38350233/cant-update-date-field-in-mysql-using-php/38350266>
+
+#### Problème avec la comparaison de chaînes de caractères lorsque l'on utilise des majuscules et des minuscules avec MySQL
+
+Voici un [article](https://www.oreilly.com/library/view/mysql-cookbook/0596001452/ch04s10.html#:~:targetText=In%20summary%2C%20comparisons%20are%20case,%2C%20SET%20%2C%20or%20TEXT%20columns.) qui résume comment prévenir et contourner le problème.
