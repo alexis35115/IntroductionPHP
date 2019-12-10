@@ -524,8 +524,114 @@ Voici un [article](https://stackoverflow.com/a/37321124) sur stackoverflow qui e
 # Prendre note qu'il faut s'assurer de mettre la fonction "header" avant de faire quoi que ce soit, sinon vous allez recevoir l'erreur "Headers already sent".
 
 # Voici l'entête à écrire pour un fichier XML UTF-8
+<?php
 header("Content-Type: application/xml; charset=utf-8");
 
+# Autres instructions ici-bas...
+?>
 ```
 
 En bonus, voici là [différence](https://stackoverflow.com/a/4832418) entre "text/xml" et "application/xml".
+
+#### Problème avec l'affichage des images à partir d'un flux RSS
+
+Pour être en mesure d'afficher des images à partir d'un flux RSS, il est important d'inclure la balise image au bon endroit.
+
+Voici un exemple d'un flux RSS avec des images :
+
+```xml
+<rss xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Chexed.com</title>
+        <image>
+            <url>http://chexed.com/images/chexed.gif</url>
+            <width>110</width>
+            <height>38</height>
+            <title>Chexed.com</title>
+            <link>http://www.chexed.com/</link>
+        </image>
+        <description>Philosophy, art, technology, life.</description>
+        <link>http://www.chexed.com/</link>
+        <item>
+            <title>Installing Xpand!2 for Reaper DAW</title>
+            <description>
+                <![CDATA[
+                    <img align="left" hspace="8" src="http://chexed.com/a/Audio_Video_Photo/img893/sm_Xpand2_Reaper.jpg"/><br />
+                ]]>
+                Below lists the steps I had to take to get it working.
+            </description>
+            <category domain="http://chexed.com/Audio_Video_Photo">Audio Video Photo</category>
+            <link>
+                http://chexed.com/a/Audio_Video_Photo/Installing_Xpand_2_for_Reaper_DAW_id9514o.html
+            </link>
+            <pubDate>Fri, 30 Dec 2016 23:37:18 EDT</pubDate>
+            <guid isPermaLink="true">
+                http://chexed.com/a/Audio_Video_Photo/Installing_Xpand_2_for_Reaper_DAW_id9514o.html
+            </guid>
+        </item>
+    </channel>
+</rss>
+```
+
+Voici un extrait de code pour la génération du flux RSS :
+
+```php
+<?php
+header("Content-type: application/xml; charset=utf-8");
+echo('<?xml version="1.0" encoding="UTF-8"?>');
+
+include "connexion.php";
+$requeteObtenirUtilisateurs = "SELECT id, nom, description, photo from utilisateur";
+
+$resultatRequete = $basededonnees->prepare($requeteObtenirUtilisateurs)->execute();
+$utilisateurs = $resultatRequete->fetchAll();
+
+?> 
+
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Liste des utilisateurs</title>
+	<atom:link href="https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/nouvelles/feed" rel="self" type="application/rss+xml" />
+	<link>https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/utilisateurs</link>
+	<description>Affichage des utilisateurs</description>
+	<lastBuildDate>Fri, 13 Dec 2019 14:27:41 +0000</lastBuildDate>
+	<language>fr-CA</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+    <generator>Programmation manuelle</generator>
+
+<?php 
+
+	foreach($utilisateurs as $utilisateur)
+	{
+?>
+		<item>
+			<title><?=$utilisateur['nom']?></title>
+			<link>https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/utilisateurs.php?id=<?=$utilisateur['id']?></link>
+			<pubDate>Mon, 18 Mar 2019 14:27:41 +0000</pubDate>
+			<category><![CDATA[Utilisateurs]]></category>
+			<guid isPermaLink="false">https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/utilisateurs.php?id=<?=$utilisateur['id']?></guid>
+			<description>
+				<![CDATA[<img src="https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/images/<?=$utilisateur['photo']?>"alt="Image de <?=$utilisateur['nom']?>" /><br>]]>
+				<![CDATA[<?=$utilisateur['description']; ?>]]>
+			</description>
+		</item>
+<?php
+	}
+
+?>
+
+	</channel>
+</rss>
+
+```
+
+Voici un [outil en ligne](https://codebeautify.org/rssviewer#) qui permet de visualiser votre flux RSS.
