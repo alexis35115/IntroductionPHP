@@ -502,3 +502,30 @@ Références : <https://stackoverflow.com/questions/38350233/cant-update-date-fi
 #### Problème avec la comparaison de chaînes de caractères lorsque l'on utilise des majuscules et des minuscules avec MySQL
 
 Voici un [article](https://www.oreilly.com/library/view/mysql-cookbook/0596001452/ch04s10.html#:~:targetText=In%20summary%2C%20comparisons%20are%20case,%2C%20SET%20%2C%20or%20TEXT%20columns.) qui résume comment prévenir et contourner le problème.
+
+#### Problème avec l'affichage d'un rendu XML à partir d'un fichier php 
+
+Avant de donner la solution au problème, il faut comprendre comment un fureteur décide d'afficher un fichier. Tout est lié au type MIME!
+
+Qu'est-ce qu'un "Type MIME" ou bien "Content Type" en anglais? 
+
+Voici un extrait de la [documentation](https://developer.mozilla.org/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) de Mozilla :
+
+    Le type Multipurpose Internet Mail Extensions (type MIME) est un standard permettant d'indiquer la nature et le format d'un document. Il est défini au sein de la RFC 6838. L'Internet Assigned Numbers Authority (IANA) est l'organisme officiel responsable du suivi de l'ensemble des types MIME officiels existants. Une liste exhaustive et maintenue est consultable sur la page Media Types de l'IANA.
+
+    Les navigateurs utilisent le plus souvent le type MIME et non l'extension d'un fichier pour déterminer la façon dont ils vont traiter ou afficher un document. Il est donc important que les serveurs puissent correctement attacher le type MIME dans l'en-tête de la réponse qu'ils renvoient.
+
+Comment puis-je savoir quel est le type MIME à partir du fureteur?
+
+Voici un [article](https://stackoverflow.com/a/37321124) sur stackoverflow qui explique la procédure à suivre.
+
+```php
+
+# Prendre note qu'il faut s'assurer de mettre la fonction "header" avant de faire quoi que ce soit, sinon vous allez recevoir l'erreur "Headers already sent".
+
+# Voici l'entête à écrire pour un fichier XML UTF-8
+header("Content-Type: application/xml; charset=utf-8");
+
+```
+
+En bonus, voici là [différence](https://stackoverflow.com/a/4832418) entre "text/xml" et "application/xml".
