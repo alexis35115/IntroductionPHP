@@ -249,7 +249,7 @@ SELECT * FROM nomTable;
 ```
 
 ```sql
--- Récupérer tous les enregistrements d'une table ou l'[id] est égale à 1
+-- Récupérer tous les enregistrements d'une table ou l'[id] est égale à 1 
 SELECT * FROM nomTable WHERE id = 1;
 ```
 
