@@ -634,4 +634,4 @@ $utilisateurs = $resultatRequete->fetchAll();
 
 ```
 
-Voici un [outil en ligne](https://codebeautify.org/rssviewer#) qui permet de visualiser votre flux RSS.
+Voici un [outil en ligne](https://codebeautify.org/rssviewer#) qui permet de visualiser votre flux RSS. 
