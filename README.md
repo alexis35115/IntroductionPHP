@@ -16,7 +16,7 @@ PHP a permis de créer un grand nombre de sites web célèbres, comme Facebook, 
 
 ### Configuration de l'environnement de travail
 
-Se référer au [guide](https://www.dropbox.com/sh/ng3cfib6mkz5vb7/AAAfjjyGkXm6k5YicMksqEOSa?dl=0&preview=Configuration+PHP+et+MySQL.pdf).
+Se référer au [guide](https://github.com/alexis35115/bitnami-wamp).
 
 De plus, voir le [fichier powershell](https://github.com/alexis35115/InitialSetupVisualStudioCode/blob/master/InitialSetupVisualStudioCode.ps1) pour effectuer une configuration initiale de Visal Studio Code.
 
@@ -297,8 +297,8 @@ Si vous avez à travailler avec des données en format texte, il est plus simple
 
 - Ouvrez phpMyAdmin.
 - À partir de la liste de gauche, cliquez sur le nom de la base de données à exporter. La page se rafraîchira pour afficher les informations relatives à la base de données sélectionnée.
-- Cliquez sur l’onglet « Exporter ». La page se rafraîchira pour afficher les options d’exportation.
-- À partir du groupe « Exporter », sélectionnez l’option « MySQL » si ce n’est déjà fait.
+- Cliquez sur l'onglet « Exporter ». La page se rafraîchira pour afficher les options d'exportation.
+- À partir du groupe « Exporter », sélectionnez l'option « MySQL » si ce n'est déjà fait.
 - Dans la section « Options SQL » (SQL Options), cochez les cases jouxtant les options « Structure » et « Données ».
 - Cochez la case « Transmettre » située au bas des options.
 - Cliquez sur le bouton « Exécuter ».
@@ -589,47 +589,47 @@ $utilisateurs = $resultatRequete->fetchAll();
 ?> 
 
 <rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
-	>
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    >
 
 <channel>
-	<title>Liste des utilisateurs</title>
-	<atom:link href="https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/nouvelles/feed" rel="self" type="application/rss+xml" />
-	<link>https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/utilisateurs</link>
-	<description>Affichage des utilisateurs</description>
-	<lastBuildDate>Fri, 13 Dec 2019 14:27:41 +0000</lastBuildDate>
-	<language>fr-CA</language>
-	<sy:updatePeriod>hourly</sy:updatePeriod>
-	<sy:updateFrequency>1</sy:updateFrequency>
+    <title>Liste des utilisateurs</title>
+    <atom:link href="https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/nouvelles/feed" rel="self" type="application/rss+xml" />
+    <link>https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/utilisateurs</link>
+    <description>Affichage des utilisateurs</description>
+    <lastBuildDate>Fri, 13 Dec 2019 14:27:41 +0000</lastBuildDate>
+    <language>fr-CA</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
     <generator>Programmation manuelle</generator>
 
 <?php 
 
-	foreach($utilisateurs as $utilisateur)
-	{
+    foreach($utilisateurs as $utilisateur)
+    {
 ?>
-		<item>
-			<title><?=$utilisateur['nom']?></title>
-			<link>https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/utilisateurs.php?id=<?=$utilisateur['id']?></link>
-			<pubDate>Mon, 18 Mar 2019 14:27:41 +0000</pubDate>
-			<category><![CDATA[Utilisateurs]]></category>
-			<guid isPermaLink="false">https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/utilisateurs.php?id=<?=$utilisateur['id']?></guid>
-			<description>
-				<![CDATA[<img src="https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/images/<?=$utilisateur['photo']?>"alt="Image de <?=$utilisateur['nom']?>" /><br>]]>
-				<![CDATA[<?=$utilisateur['description']; ?>]]>
-			</description>
-		</item>
+        <item>
+            <title><?=$utilisateur['nom']?></title>
+            <link>https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/utilisateurs.php?id=<?=$utilisateur['id']?></link>
+            <pubDate>Mon, 18 Mar 2019 14:27:41 +0000</pubDate>
+            <category><![CDATA[Utilisateurs]]></category>
+            <guid isPermaLink="false">https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/utilisateurs.php?id=<?=$utilisateur['id']?></guid>
+            <description>
+                <![CDATA[<img src="https://tim.cgmatane.qc.ca/tech/garonmichaud/php/exemple/images/<?=$utilisateur['photo']?>"alt="Image de <?=$utilisateur['nom']?>" /><br>]]>
+                <![CDATA[<?=$utilisateur['description']; ?>]]>
+            </description>
+        </item>
 <?php
-	}
+    }
 
 ?>
 
-	</channel>
+    </channel>
 </rss>
 
 ```
